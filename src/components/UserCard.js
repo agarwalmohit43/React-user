@@ -3,12 +3,12 @@ import faker from 'faker'
 
 const UserCard = props => {
     const {avatar_url, name, bio, url, login, followers, public_repos} = props.userInfo;
-    const userImage = avatar_url || faker.image.avatar();
+
     return (
         <div className="ui link cards" style={{padding: '20px'}}>
             <div className="card">
                 <div className="image">
-                    <img class="ui medium circular image" src={userImage}/>
+                    <img class="ui medium circular image" src={avatar_url}/>
                 </div>
                 <div className="content">
                     <div className="header">{name}</div>
